@@ -7,8 +7,13 @@ namespace Alenny.LeetCode
     {
         static void Main(string[] args)
         {
-            var sol = new LongestTurbulentSubarray();
-            var ret = sol.MaxTurbulenceSize(new int[] { 0, 8, 45, 88, 48, 68, 28, 55, 17, 24 });
+            var sol = new UniquePaths3();
+            var param = new int[][] {
+                new int[] {1,0,0,0},
+                new int[] {0,0,0,0},
+                new int[] {0,0,2,-1}
+            };
+            var ret = sol.UniquePathsIII(param);
             Console.WriteLine(ret);
         }
     }
