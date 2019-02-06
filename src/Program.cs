@@ -1,4 +1,5 @@
 ﻿using System;
+using Alenny.LeetCode.Utilities;
 using Alenny.LeetCode.Problems;
 
 namespace Alenny.LeetCode
@@ -7,14 +8,17 @@ namespace Alenny.LeetCode
     {
         static void Main(string[] args)
         {
-            var sol = new UniquePaths3();
-            var param = new int[][] {
-                new int[] {1,0,0,0},
-                new int[] {0,0,0,0},
-                new int[] {0,0,2,-1}
-            };
-            var ret = sol.UniquePathsIII(param);
-            Console.WriteLine(ret);
+            var heap = new Heap((x, y) => y - x);
+            heap.Insert(1);
+            heap.Insert(5);
+            heap.Insert(2);
+            heap.Insert(4);
+            heap.Insert(3);
+            Console.WriteLine(heap.Pop());
+            Console.WriteLine(heap.Pop());
+            Console.WriteLine(heap.Pop());
+            Console.WriteLine(heap.Pop());
+            Console.WriteLine(heap.Pop());
         }
     }
 }
